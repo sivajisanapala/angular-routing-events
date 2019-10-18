@@ -1,0 +1,16 @@
+/* Add application styles & imports to this file! */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+/* @import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css'); */
+
+@media screen and (max-width:1024px) {
+  .lmenu {
+    display: none;
+  }
+}
+
+
+/* imp links 
+
+https://medium.com/@mirokoczka/3-ways-to-communicate-between-angular-components-a1e3f3304ecb
+*/

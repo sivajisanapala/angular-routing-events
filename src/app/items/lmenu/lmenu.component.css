@@ -1,0 +1,14 @@
+.lmenu {
+  width: 240px;
+  float: left;
+  height: 100vh;
+  background-color: #f5f3f3;
+}
+.lmenu ul li {
+  padding: 3px 25px;
+  border-bottom: 1px solid #cfcfcf;
+}
+
+:host.is-open {
+  display: none;
+}

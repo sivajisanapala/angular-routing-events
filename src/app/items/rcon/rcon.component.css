@@ -1,0 +1,5 @@
+.rcon {
+  width: calc(100% - 240px);
+  float: left;
+  height: 100vh;
+}

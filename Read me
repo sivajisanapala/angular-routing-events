@@ -1,0 +1,6 @@
+
+/*toggle class*/ 
+<div (click)="status=!status"  
+    [ngClass]="status ? 'success' : 'danger'">                
+     Some content
+</div>
