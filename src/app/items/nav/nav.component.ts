@@ -13,11 +13,11 @@ export class NavComponent implements OnInit {
 
   constructor() { }
 
-  @Input() sideBar: LmenuComponent;
+   @Output() toggle: EventEmitter<null> = new EventEmitter();
 
   @HostListener('click')
   click() {
-    this.sideBar.toggle();
+    this.toggle.emit();
   }
 
   ngOnInit() {

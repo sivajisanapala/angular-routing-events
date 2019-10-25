@@ -9,17 +9,10 @@ import { NavComponent } from '../nav/nav.component';
 })
 export class LmenuComponent implements OnInit {
 
-  // constructor(private clickevent:NavComponent) { 
-
-  // }
-  @HostBinding('class.is-open')
-  isOpen = false;
-
-  toggle() {
-    this.isOpen = !this.isOpen;
-  }
-
   ngOnInit() {
   }
-// @Input() myEvent: any;
+  
+  @HostBinding('class.is-open') @Input()
+  isOpen = false;
+
 }

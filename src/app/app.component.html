@@ -1,3 +1,4 @@
-<app-nav (myEvent)="upCase($event)" [sideBar]="sideBar"></app-nav>
+<app-nav (myEvent)="upCase($event)"></app-nav>
 <app-lmenu #sideBar></app-lmenu>
+<button (click)="toggleMenu()">Toggle sidebar from app component</button>
 <app-rcon></app-rcon>

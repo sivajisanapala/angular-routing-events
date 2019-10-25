@@ -1,16 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
   styleUrls: [ './app.component.css' ]
 })
-export class AppComponent  {
-  name = 'Angular';
+export class AppComponent implements OnInit {
+ sideBarIsOpened = false;
 
+  ngOnInit() {
+    this.sideBarIsOpened = true;
+  }
 
-
-  public result="";
-
+  toggleMenu(shouldOpen: boolean) {
+    this.sideBarIsOpened = !this.sideBarIsOpened;
+  }
 }
   
