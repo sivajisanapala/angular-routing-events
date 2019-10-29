@@ -6,14 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent implements OnInit {
- sideBarIsOpened = false;
 
   ngOnInit() {
-    this.sideBarIsOpened = true;
   }
 
-  toggleMenu(shouldOpen: boolean) {
-    this.sideBarIsOpened = !this.sideBarIsOpened;
+  mi_state = false;
+  toggleMenu() {
+
+    if(this.mi_state == false){
+      this.mi_state = !this.mi_state;
+    }else{
+      this.mi_state = !this.mi_state;
+    }
   }
+   
 }
   

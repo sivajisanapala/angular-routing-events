@@ -1,5 +1,6 @@
 import { Component, OnInit, EventEmitter, Output, Input, Injectable, HostListener  } from '@angular/core';
-import { LmenuComponent } from '../lmenu/lmenu.component';
+// import { LmenuComponent } from '../lmenu/lmenu.component';
+// import { SideBarService } from '../lmenu/ltoggle.service';
 // import * as $ from 'jquery';
 
 @Component({
@@ -11,29 +12,16 @@ import { LmenuComponent } from '../lmenu/lmenu.component';
 // @Injectable() 
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  ngOnInit() {
+  }
 
-   @Output() toggle: EventEmitter<null> = new EventEmitter();
+    constructor(
+    // private sideBarService: SideBarService
+  ) { }
 
   @HostListener('click')
   click() {
-    this.toggle.emit();
-  }
-
-  ngOnInit() {
-  }
-  mi_state = false;
-
-  @Output() myEvent = new EventEmitter();
-
-   toggleMenu() {
-   
-    if(this.mi_state == false){
-      this.mi_state = !this.mi_state;
-    }else{
-      this.mi_state = !this.mi_state;
-    }
-           
+    // this.sideBarService.toggle();
   }
 
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit, EventEmitter, Input, HostBinding } from '@angular/core';
 
-import { NavComponent } from '../nav/nav.component';
+import { SideBarService } from './ltoggle.service';
 
 @Component({
   selector: 'app-lmenu',
@@ -9,10 +9,17 @@ import { NavComponent } from '../nav/nav.component';
 })
 export class LmenuComponent implements OnInit {
 
-  ngOnInit() {
-  }
-  
-  @HostBinding('class.is-open') @Input()
+
+@HostBinding('class.is-open')
   isOpen = false;
 
+  constructor(
+    private sideBarService: SideBarService
+  ) { }
+
+  ngOnInit() {
+    this.sideBarService.change.subscribe(isOpen => {
+      this.isOpen = isOpen;
+    });
+  }
 }
