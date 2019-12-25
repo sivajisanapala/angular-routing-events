@@ -11,9 +11,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ServiceComponent } from './pages/service/service.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { Contact1Component } from './pages/contact/items/contact1/contact1.component';
-import { Contact2Component } from './pages/contact/items/contact2/contact2.component';
-import { Contact3Component } from './pages/contact/items/contact3/contact3.component';
+import { Info1Component } from './pages/contact/info1/info1.component';
+import { Info2Component } from './pages/contact/info2/info2.component';
+import { Info3Component } from './pages/contact/info3/info3.component';
 
 
 const appRoute: Route = [
@@ -26,15 +26,15 @@ const appRoute: Route = [
     path: 'contact',
     component: ContactComponent,
     childern: [
-      {path:'info', component:Contact1Component},
-      {path:'info', component:Contact2Component},
-      {path:'info', component:Contact3Component}
+      {path:'info1', component:Info1Component},
+      {path:'info2', component:Info2Component},
+      {path:'info3', component:Info3Component}
     ]
   }
 ]
 @NgModule({
   imports:      [ BrowserModule, FormsModule, RouterModule.forRoot(appRoute) ],
-  declarations: [ AppComponent, NavComponent, LmenuComponent, RconComponent, HomeComponent, AboutComponent, ServiceComponent, ContactComponent, Contact1Component, Contact2Component, Contact3Component ],
+  declarations: [ AppComponent, NavComponent, LmenuComponent, RconComponent, HomeComponent, AboutComponent, ServiceComponent, ContactComponent, Info1Component, Info2Component, Info3Component ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

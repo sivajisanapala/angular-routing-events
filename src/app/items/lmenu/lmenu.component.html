@@ -1,10 +1,10 @@
 
-    <div class="lmenu" [class.hide_menu]="menu_state" (click)="NavComponent.toggleMenu()">
+    <div class="lmenu">
     <ul class="navbar-nav mr-auto">
-      <li routerLinkActive="active"><a [routerLink]="['/home']">Home</a></li>
+      <!-- <li routerLinkActive="active"><a [routerLink]="['/home']">Home</a></li>
       <li routerLinkActive=""><a [routerLink]="['/about']">About</a></li>
       <li routerLinkActive=""><a [routerLink]="['/service']">Service</a></li>
-      <li routerLinkActive=""><a [routerLink]="['/contact']">Contact</a></li>
-      
+      <li routerLinkActive=""><a [routerLink]="['/contact']">Contact</a></li> -->
+      <li *ngFor ="let route of routes"><a [routerLink]="route.url" >{{route.linkName}}</a></li>
     </ul>
     </div>

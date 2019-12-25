@@ -1,9 +1,11 @@
 
 
 <ul class="list-items">
-	<li [routerLink]="['/about']"> content - 1</li>
+	<!-- <li [routerLink]="['/info1']"> content - 1</li>
 	<li>content - 2</li>
-	<li>content - 3</li>
+	<li>content - 3</li> -->
+
+  <li *ngFor ="let route of routes"><a [routerLink]="route.url" >{{route.linkName}}</a></li>
 </ul>
 
  <router-outlet></router-outlet>

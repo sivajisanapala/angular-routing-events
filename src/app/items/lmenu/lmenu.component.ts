@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Input, HostBinding } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 
 @Component({
@@ -8,17 +8,17 @@ import { Component, OnInit, EventEmitter, Input, HostBinding } from '@angular/co
 })
 export class LmenuComponent implements OnInit {
 
-
-@HostBinding('class.is-open')
-  isOpen = false;
-
   constructor(
-    // private sideBarService: SideBarService
   ) { }
 
   ngOnInit() {
-    // this.sideBarService.change.subscribe(isOpen => {
-    //   this.isOpen = isOpen;
-    // });
+   
   }
+
+  routes = [
+    {linkName: 'Home',url: 'home'},
+    {linkName: 'Service',url: 'service'},
+    {linkName: 'About',url: 'about'},
+    {linkName: 'Contact',url: 'contact'}
+  ]
 }

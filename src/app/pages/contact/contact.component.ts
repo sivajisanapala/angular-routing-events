@@ -12,10 +12,10 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
   }
 
-private Items = [
-  {name:"content-1"},
-  {name:"content-2"},
-  {name:"content-3"},
-]
+ routes = [
+    {linkName: 'info1',url: 'info1'},
+    {linkName: 'info2',url: 'info2'},
+    {linkName: 'info3',url: 'info3'}
+  ]
 
 }
