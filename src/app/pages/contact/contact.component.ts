@@ -12,4 +12,10 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
   }
 
+private Items = [
+  {name:"content-1"},
+  {name:"content-2"},
+  {name:"content-3"},
+]
+
 }
