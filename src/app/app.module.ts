@@ -30,7 +30,8 @@ const appRoute: Route = [
       {path:'info2', component:Info2Component},
       {path:'info3', component:Info3Component}
     ]
-  }
+  },
+  { path: '**', component: AboutComponent },
 ]
 @NgModule({
   imports:      [ BrowserModule, FormsModule, RouterModule.forRoot(appRoute) ],
