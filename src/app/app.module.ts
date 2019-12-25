@@ -18,7 +18,7 @@ import { Info3Component } from './pages/contact/info3/info3.component';
 
 const appRoute: Route = [
   
-  {path: '', component:HomeComponent},
+  {path: '', redirectTo:'/home',pathMath: 'prefix'},
   {path: 'home', component:HomeComponent},
   { path: 'service', component: ServiceComponent },
   { path: 'about', component: AboutComponent },
