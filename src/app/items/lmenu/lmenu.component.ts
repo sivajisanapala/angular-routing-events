@@ -19,6 +19,8 @@ export class LmenuComponent implements OnInit {
     {linkName: 'Home',url: 'home'},
     {linkName: 'Service',url: 'service'},
     {linkName: 'About',url: 'about'},
-    {linkName: 'Contact',url: 'contact'}
+    {linkName: 'Contact',url: 'contact'},
+    {linkName: 'Register',url: 'register'},
+    {linkName: 'Profile',url: 'profile'}
   ]
 }

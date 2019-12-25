@@ -14,6 +14,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { Info1Component } from './pages/contact/info1/info1.component';
 import { Info2Component } from './pages/contact/info2/info2.component';
 import { Info3Component } from './pages/contact/info3/info3.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { UprofileComponent } from './pages/uprofile/uprofile.component';
 
 
 const routes: Route = [
@@ -32,11 +34,13 @@ const routes: Route = [
       {path:'info3', component:Info3Component}
     ]
   },
-  { path: '**', component: Info1Component },
+  { path: 'register', component: RegisterComponent },
+  { path: 'profile', component: UprofileComponent },
+  { path: '**', component: Info1Component }
 ]
 @NgModule({
   imports:      [ BrowserModule, FormsModule, RouterModule.forRoot(routes) ],
-  declarations: [ AppComponent, NavComponent, LmenuComponent, RconComponent, HomeComponent, AboutComponent, ServiceComponent, ContactComponent, Info1Component, Info2Component, Info3Component ],
+  declarations: [ AppComponent, NavComponent, LmenuComponent, RconComponent, HomeComponent, AboutComponent, ServiceComponent, ContactComponent, Info1Component, Info2Component, Info3Component, RegisterComponent, UprofileComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

@@ -1,9 +1,7 @@
 
 <button (click)="goPrevious()" [routerLink]="['../']"> &lt; Back</button>
 <ul class="list-items">
-	<!-- <li [routerLink]="['/info1']"> content - 1</li>
-	<li>content - 2</li>
-	<li>content - 3</li> -->
+
 
   <li routerLinkActive="active" *ngFor ="let route of routes"><a [routerLink]="route.url" >{{route.linkName}}</a></li>
 </ul>
