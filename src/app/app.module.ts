@@ -16,7 +16,7 @@ import { Info2Component } from './pages/contact/info2/info2.component';
 import { Info3Component } from './pages/contact/info3/info3.component';
 
 
-const appRoute: Route = [
+const routes: Route = [
   
   // {path: '', redirectTo:'/home', pathMath: 'full'},
   {path: '', component:HomeComponent},
@@ -26,7 +26,7 @@ const appRoute: Route = [
   { 
     path: 'contact',
     component: ContactComponent,
-    childern: [
+    children: [
       {path:'info1', component:Info1Component},
       {path:'info2', component:Info2Component},
       {path:'info3', component:Info3Component}
@@ -35,7 +35,7 @@ const appRoute: Route = [
   { path: '**', component: Info1Component },
 ]
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, RouterModule.forRoot(appRoute) ],
+  imports:      [ BrowserModule, FormsModule, RouterModule.forRoot(routes) ],
   declarations: [ AppComponent, NavComponent, LmenuComponent, RconComponent, HomeComponent, AboutComponent, ServiceComponent, ContactComponent, Info1Component, Info2Component, Info3Component ],
   bootstrap:    [ AppComponent ]
 })
