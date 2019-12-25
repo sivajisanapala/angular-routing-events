@@ -18,7 +18,8 @@ import { Info3Component } from './pages/contact/info3/info3.component';
 
 const appRoute: Route = [
   
-  {path: '', redirectTo:'/home',pathMath: 'prefix'},
+  // {path: '', redirectTo:'/home', pathMath: 'full'},
+  {path: '', component:HomeComponent},
   {path: 'home', component:HomeComponent},
   { path: 'service', component: ServiceComponent },
   { path: 'about', component: AboutComponent },
@@ -31,7 +32,7 @@ const appRoute: Route = [
       {path:'info3', component:Info3Component}
     ]
   },
-  { path: '**', component: AboutComponent },
+  { path: '**', component: Info1Component },
 ]
 @NgModule({
   imports:      [ BrowserModule, FormsModule, RouterModule.forRoot(appRoute) ],
