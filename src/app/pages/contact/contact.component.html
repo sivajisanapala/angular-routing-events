@@ -1,11 +1,12 @@
 
-
+<button > &lt; Back</button>
 <ul class="list-items">
 	<!-- <li [routerLink]="['/info1']"> content - 1</li>
 	<li>content - 2</li>
 	<li>content - 3</li> -->
 
-  <li *ngFor ="let route of routes"><a [routerLink]="route.url" >{{route.linkName}}</a></li>
+  <li routerLinkActive="active" *ngFor ="let route of routes"><a [routerLink]="route.url" >{{route.linkName}}</a></li>
 </ul>
-
- <router-outlet></router-outlet>
+<div class="inner-cont">
+   <router-outlet></router-outlet>
+</div>
