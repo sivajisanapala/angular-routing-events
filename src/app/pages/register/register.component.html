@@ -4,24 +4,28 @@
   <form #userform="ngForm">
     {{userform.value | json}}
 
+    <hr>
+
+    {{usermodel |json}}
+
 <div class="form-group">
   <label for="uname">Name</label>
-  <input type="text" name="uname" class="form-control" ngModel>
+  <input type="text" name="uname" class="form-control" [(ngModel)]='usermodel.name'>
 </div>
 
 <div class="form-group">
   <label for="email">Email</label>
-  <input type="email" name="email" class="form-control" ngModel>
+  <input type="email" name="email" class="form-control" [(ngModel)]='usermodel.email'>
 </div>
 
 <div class="form-group">
   <label for="mobile">Phone Number</label>
-  <input type="tel" name="mobile" class="form-control" ngModel>
+  <input type="tel" name="mobile" class="form-control" [(ngModel)]='usermodel.mobile'>
 </div>
 
 <div class="form-group">
   <label for="course">Select Course</label>
-  <select name="course" id="">
+  <select name="course" id="" [(ngModel)]='usermodel.course'>
     <option value="" *ngFor = 'let course of courses'>{{course}}</option>
   </select>
 </div>

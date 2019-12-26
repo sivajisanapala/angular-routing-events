@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from  './user';
 
 @Component({
   selector: 'app-register',
@@ -6,9 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 
-export interface User {
- 
-}
+
 export class RegisterComponent implements OnInit {
 
   constructor(
@@ -19,7 +18,7 @@ export class RegisterComponent implements OnInit {
 
   public courses = ['Angular', 'React', 'Vue'];
 
-  usermodel = new User [];
+  usermodel = new User ('swathi', 'swat@test', 435355, '')
   ngOnInit() {
   }
 
