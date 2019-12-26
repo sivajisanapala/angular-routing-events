@@ -5,10 +5,21 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
+
+export interface User {
+ 
+}
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    
+  ) { }
+  
+  
 
+  public courses = ['Angular', 'React', 'Vue'];
+
+  usermodel = new User [];
   ngOnInit() {
   }
 

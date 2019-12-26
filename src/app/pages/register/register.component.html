@@ -1,3 +1,31 @@
-<p>
-register works!dffdsf
-</p>
+<div class="container-fluid">
+  <h3>Register Form</h3>
+
+  <form #userform="ngForm">
+    {{userform.value | json}}
+
+<div class="form-group">
+  <label for="uname">Name</label>
+  <input type="text" name="uname" class="form-control" ngModel>
+</div>
+
+<div class="form-group">
+  <label for="email">Email</label>
+  <input type="email" name="email" class="form-control" ngModel>
+</div>
+
+<div class="form-group">
+  <label for="mobile">Phone Number</label>
+  <input type="tel" name="mobile" class="form-control" ngModel>
+</div>
+
+<div class="form-group">
+  <label for="course">Select Course</label>
+  <select name="course" id="">
+    <option value="" *ngFor = 'let course of courses'>{{course}}</option>
+  </select>
+</div>
+
+<button class="btn-primary" type="submit" >Submit</button>
+  </form>
+</div>
