@@ -8,6 +8,17 @@
   padding: 3px 25px;
   border-bottom: 1px solid #cfcfcf;
 }
+.lmenu ul li a {
+  color: black;
+}
+
+.lmenu ul li a:hover {
+  text-decoration: none;
+}
+
+.lmenu ul li.active-item a {
+color:blue;
+}
 
 :host.is-open {
   display: none;

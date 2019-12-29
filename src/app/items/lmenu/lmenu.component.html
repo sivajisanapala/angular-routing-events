@@ -5,6 +5,6 @@
       <li routerLinkActive=""><a [routerLink]="['/about']">About</a></li>
       <li routerLinkActive=""><a [routerLink]="['/service']">Service</a></li>
       <li routerLinkActive=""><a [routerLink]="['/contact']">Contact</a></li> -->
-      <li *ngFor ="let route of routes"><a [routerLink]="route.url" >{{route.linkName}}</a></li>
+      <li *ngFor ="let route of routes"  routerLinkActive="active-item"><a [routerLink]="route.url" >{{route.linkName}}</a></li>
     </ul>
     </div>
